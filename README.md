@@ -2,7 +2,7 @@
 Practice with Redux
 
 ## Branches
-
+- lesson-1: display data from central store by using "mapStateToProps()"
 
 ## Terms
 - Redux: central data store for all app data (global state)
