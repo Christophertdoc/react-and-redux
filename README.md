@@ -4,7 +4,8 @@ Based on the following tutorials starting at video #34: https://www.youtube.com/
 
 ## Branches
 - lesson-1: display data from central store by using "mapStateToProps()"
-- lesson-2: 
+    1. In particular, we display a list of blog posts on the homepage.
+- lesson-2: display redux data of an individual post on its own page
 
 ## Terms
 - Redux: central data store for all app data (global state)
