@@ -1,29 +1,21 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import { Route, BrowserRouter, Switch } from 'react-router-dom'
+import Home from './components/Home'
+import Post from './components/Post'
 
 class App extends Component {
 	render() {
-		const { posts } = this.props
 		return (
-			<div className="App">
-				<h1>App</h1>
-				{posts.map(post => {
-					return (
-						<div className='post' key={post.id}>
-							<h3>{post.title}</h3>
-							<p>{post.body}</p>
-						</div>
-					)
-				})}
-			</div>
+			<BrowserRouter>
+				<div className="App">
+					<Switch>
+						<Route exact path='/' component={Home}/>
+						<Route path='/:post_id' component={Post} />
+					</Switch>
+				</div>
+			</BrowserRouter>
 		)
 	}
 }
 
-const mapStateToProps = (state) => {
-	return {
-		posts: state.posts
-	}
-}
-
-export default connect(mapStateToProps)(App)
+export default App
